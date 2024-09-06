@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
+.arrow-wrapper:hover h1 {
+  opacity: 1;
+}
+
+#arrow_2 .arrow {
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+#arrow_2 .arrow span {
+  display: block;
+  width: 3em;
+  opacity: 0;
+  transition: opacity 0.3s 0s;
+  padding: 0 0.5em;
+}
+
+#arrow_2 .arrow:hover span {
+  opacity: 1;
+  transition: opacity 0.3s 0.1s;
+}
+
+#arrow_2 .arrow:before {
+  content: "";
+  display: block;
+  border: solid #fff;
+  border-width: 4px 4px 0 0;
+  position: absolute;
+  font-weight: 900;
+  top: 4px;
+  width: 25px;
+  height: 25px;
+}
+
+#arrow_2 .arrow.arrow--left:before {
+  transform: rotate(-135deg);
+  right: 0;
+  transition: right 0.3s 0.2s;
+}
+
+#arrow_2 .arrow.arrow--left:hover:before {
+  right: 100%;
+  transition: right 0.3s;
+}
+
+#arrow_2 .arrow.arrow--right {
+  text-align: right;
+}
+
+#arrow_2 .arrow.arrow--right:before {
+  left: 0;
+  transform: rotate(45deg);
+  transition: left 0.3s 0.2s;
+}
+
+#arrow_2 .arrow.arrow--right:hover:before {
+  left: 100%;
+  transition: left 0.3s;
+}
+
+#arrow_2 .arrow:hover {
+  transform: none;
+}
+
+/* Background Color Animation */
+@keyframes bgColorTransition {
+  0% {
+    background-color: #00848d;
+  }
+  100% {
+    background-color: #005f6b;
+  }
+}
