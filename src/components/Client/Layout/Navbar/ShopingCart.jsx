@@ -75,11 +75,11 @@ export const ShopingCart = () => {
               key={index}
               className="flex w-[100%] gap-x-5 items-center px-2  p-2 border-b-[1px] "
             >
-              <div className="w-[110px] h-[60px] flex items-center ">
+              <div className="w-[100px] h-[60px] flex items-center  rounded-lg">
                 <Image
                   width={0}
                   height={0}
-                  className="object-fill w-full h-full"
+                  className="object-fill w-full h-full rounded-lg"
                   src={cartimage}
                   alt=""
                 />
@@ -103,18 +103,18 @@ export const ShopingCart = () => {
                   <div className="flex"></div>
                   <span className="flex justify-end ">
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="-ml-1  h-5 w-5 text-gray-200 hover:text-red-500"
+                      class="h-[25px] w-[25px] rounded-full p-1 hover:text-red-500 text-gray-100 bg-[#2d323f] cursor-pointer "
                       fill="none"
-                      viewBox="0 0 24 24"
                       stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      ></path>
                     </svg>
                   </span>
                 </div>
@@ -168,7 +168,7 @@ export const ShopingCart = () => {
           </button>
           <Link href={"/"}>
             {" "}
-            <button className="border-[1px] hover:bg-transparent bg-[#e6ce92] text-black border-gray-400  text-[13px] font-medium px-[15px] py-[12px] p-1 rounded-[10px]">
+            <button className="border-[1px] hover:bg-[#e6ce92] bg-transparent  text-white hover:text-black border-gray-400  text-[13px] font-medium px-[15px] py-[12px] p-1 rounded-[10px]">
               BUY WITH SHOP
             </button>
           </Link>

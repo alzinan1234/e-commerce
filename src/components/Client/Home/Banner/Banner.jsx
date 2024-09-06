@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import sliderOne from "@/assets/Banner/benner.jpg";
 import sliderTwo from "@/assets/Banner/benner2.jpg";
 import sliderFore from "@/assets/Banner/banner4.jpg";
-// import ShineBorder from "@/components/magicui/shine-border";
-// import { useTheme } from "next-themes";
+import "./BannerText.css";
 
 import "./Banner.css";
 
@@ -74,7 +73,7 @@ const Banner = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+            className={`absolute  left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
               index === currentSlide
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-0"
@@ -83,6 +82,7 @@ const Banner = () => {
             } h-[100%] w-full bg-cover bg-center flex items-center justify-center`}
             style={{
               backgroundImage: `url(${slide.image.src})`,
+              backgroundAttachment: "fixed",
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out flex md:flex-row items-center">
@@ -91,27 +91,23 @@ const Banner = () => {
                   index === currentSlide ? "translate-y-0" : "translate-y-5"
                 }`}
               >
-                <h3
-                  className={`mb-2 ${slide.subTextStyle} text-sm md:text-base`}
-                >
-                  {slide.subText}
-                </h3>
+                {/* <div class="flex">
+                  <button class="flex-1 font-bold text-xl btn-gradient px-6 py-3 rounded-xl">
+                    {slide.subText}
+                  </button>
+                </div> */}
 
-                {/* <ShineBorder
-                  className="text-center text-2xl font-bold capitalize"
-                  color={theme.theme === "dark" ? "white" : "black"}
-                >
-                  Shine Border
-                </ShineBorder> */}
                 <h2
-                  className={`text-xl font-semibold text-center sm:text-2xl md:text-3xl text-white lg:text-5xl ${slide.textStyle}`}
+                  className={`text-shadow text-xl mt-5 font-semibold text-center sm:text-2xl md:text-3xl text-white lg:text-5xl ${slide.textStyle}`}
                 >
                   {slide.text?.slice(0, 20)} <br />
-                  <span className="font-extrabold pt-2">
-                    {slide.text?.slice(20, 40)}
-                  </span>
                 </h2>
-                <button className={`mt-2 ${slide.buttonStyle}`}>
+                <h2
+                  className={`text-shadow text-xl mt-3 font-semibold text-center sm:text-2xl md:text-3xl text-white lg:text-5xl ${slide.textStyle}`}
+                >
+                  {slide.text?.slice(20, 40)}
+                </h2>
+                <button className={`mt-5 ${slide.buttonStyle} shiny-cta`}>
                   {slide.buttonText}
                 </button>
               </div>

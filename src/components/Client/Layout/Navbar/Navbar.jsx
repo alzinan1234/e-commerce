@@ -63,7 +63,7 @@ export const Navbar = () => {
       >
         <div className="flex  mx-auto items-center justify-around maxWidth md:justify-evenly  ">
           {/* --------- small device toggle button -------- */}
-          <div className="menu-bar navbarRS:hidden block  w-1/3 mx-auto  ">
+          <div className="menu-bar navbarRS:hidden block  w-[20%]  md:w-1/3 mx-auto  ">
             <ToggleButton setIsOpen={setIsOpen} isOpen={isOpen} />
             <Drawer isFixed={isFixed} isOpen={isOpen} setIsOpen={setIsOpen}>
               <MenuCart isClient={isClient} setIsOpen={setIsOpen} />
@@ -71,7 +71,7 @@ export const Navbar = () => {
           </div>
 
           {/* ------------- navbar logo----------- */}
-          <div className=" flex w-1/3 mx-auto justify-center md:justify-start items-center py-[10px] navbarRS:px-2 z-[10000000] relative ">
+          <div className=" flex w-1/3 mx-auto  justify-center md:justify-start items-center py-[10px] navbarRS:px-2  ">
             <Link href={"/"} className=" ">
               <div
                 className={`${
@@ -96,7 +96,7 @@ export const Navbar = () => {
 
           {/* --------------  right Icon menus ----------- */}
           <div
-            className="relative z-[100000] flex justify-end navbarRS:pe-5 mx-auto 
+            className="relative  flex justify-end navbarRS:pe-5 mx-auto 
              items-center w-1/3"
           >
             <ul className="all-link-container items-center flex">
