@@ -1,15 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
-import sliderOne from "@/assets/Banner/benner.jpg";
+import sliderOne from "@/assets/Banner/banner4.jpg";
 import sliderTwo from "@/assets/Banner/benner2.jpg";
-import sliderFore from "@/assets/Banner/banner4.jpg";
+import sliderFore from "@/assets/Banner/benner.jpg";
 import "./BannerText.css";
 
 import "./Banner.css";
 
 const slides = [
   {
-    text: "SUMMER SALE STYLISH WOMENS",
+    text: " SUMMER SALE STYLISH MEN'S",
     subText: "NEW TREND",
     buttonText: "DISCOVER MORE",
     image: sliderOne,
@@ -20,7 +20,7 @@ const slides = [
   },
 
   {
-    text: "HELLO NEW SEASON",
+    text: "Shop the Best in Men Clothing",
     subText: "NEW TREND",
     buttonText: "DISCOVER MORE",
     image: sliderFore,
@@ -30,7 +30,7 @@ const slides = [
     layout: "justify-start",
   },
   {
-    text: "SUMMER SALE STYLISH WOMENS",
+    text: "Latest in Men's Fashion World",
     subText: "NEW TREND",
     buttonText: "DISCOVER MORE",
     image: sliderTwo,
@@ -68,8 +68,8 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
-      <div className="relative mx-auto h-[100vh] overflow-hidden ">
+    <div className="overflow-hidden ">
+      <div className="relative mx-auto h-[70vh] overflow-hidden ">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -127,7 +127,7 @@ const Banner = () => {
         {/* Next and Previous Buttons */}
         <button
           onClick={prevSlide}
-          className={`absolute  duration-500 left-4 top-1/2 transform -translate-y-1/2  text-white p-2 rounded-full `}
+          className={`absolute  duration-500 left-4 bottom-0 md:top-1/2 transform -translate-y-1/2  text-white p-2 rounded-full `}
         >
           <div id="arrow_2" className={`arrow-wrapper  relative `}>
             <div className="arrow arrow--left flex items-center justify-center">
@@ -139,7 +139,7 @@ const Banner = () => {
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2  text-white p-2 rounded-full"
+          className="absolute right-4 bottom-0 md:top-1/2 transform -translate-y-1/2  text-white p-2 rounded-full"
         >
           <div id="arrow_2" className="arrow-wrapper relative  ">
             <div className="arrow arrow--right flex items-center justify-center">

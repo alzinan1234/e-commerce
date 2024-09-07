@@ -10,6 +10,15 @@
 
 /* ---------- insite banner contain------- */
 
+@media (max-width: 600px) {
+  #arrow_2 .arrow:before {
+    font-weight: 900;
+    top: 12px !important;
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
 .btn-gradient {
   width: 200px;
   height: 39px;

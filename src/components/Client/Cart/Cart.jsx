@@ -33,23 +33,23 @@ const Cart = ({ allItems }) => {
   return (
     <>
       {allItems?.map((item, index) => (
-        <div key={index} className="m-3">
+        <div key={index} className="m-1">
           <div
             className="text-center relative mx-auto scale-105  border-gray-500 overflow-hidden p-2"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div
-              className={`h-[300px] relative  w-[100%] overflow-hidden 
+              className={`cart-image h-[300px]  relative  w-[100%] overflow-hidden 
                 ${activeBlueBtns[index] ? "image-clip-cutting" : ""}
               `}
             >
               {isCustomImage(item.ProductImage) ? (
                 <Image
-                  className="h-[300px] transition-transform duration-500 ease-in-out cursor-pointer"
+                  className=" h-[100%] image-zoom transition-transform duration-500 ease-in-out cursor-pointer"
                   style={{
                     transform:
-                      hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+                      hoveredIndex === index ? "scale(1.04)" : "scale(1)",
                   }}
                   src={
                     hoveredIndex === index
@@ -60,10 +60,10 @@ const Cart = ({ allItems }) => {
                 />
               ) : (
                 <Image
-                  className="h-[300px] transition-transform duration-500 ease-in-out cursor-pointer"
+                  className="cart-image h-[100%] image-zoom transition-transform duration-500 ease-in-out cursor-pointer"
                   style={{
                     transform:
-                      hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+                      hoveredIndex === index ? "scale(1.04)" : "scale(1)",
                   }}
                   src={hoveredIndex === index ? item?.image[0] : item?.image[1]}
                   alt=""
@@ -72,7 +72,7 @@ const Cart = ({ allItems }) => {
             </div>
             {/* -------------- product add to cart --------- */}
             <div className="py-1">
-              <h2 className="text-[14px] text-slate-700 font-bold font-body text-start overflow-text">
+              <h2 className="cart-title text-[14px] text-slate-700 font-bold font-body text-start overflow-text">
                 Project X Paris Joggers
               </h2>
               <div className="product-price pt-1 mb-3 flex flex-row md:flex-row font-title md:items-center gap-2">
@@ -81,7 +81,7 @@ const Cart = ({ allItems }) => {
                   <del className="old-price text-sm font-normal text-slate-400">
                     Tk.1090
                   </del>
-                  <span className="discount-badge rounded text-white bg-red-500 px-1 ml-1 !text-[12px]">
+                  <span className="discount-badge rounded text-white bg-red-500 px-1 ml-1 text-[12px]">
                     17% OFF
                   </span>
                 </div>

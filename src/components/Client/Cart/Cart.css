@@ -14,9 +14,52 @@
     0 16px 16px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 350px) and (max-width: 620px) {
+/* ------------- all card design change sm -------- */
+@media (max-width: 1000px) {
+  .image-zoom {
+    transform: scale(1) !important;
+  }
+}
+@media (min-width: 335px) and (max-width: 417px) {
+  .cart-title {
+    font-size: 12px !important;
+  }
+
+  .discount-badge {
+    font-size: 7px !important;
+  }
+}
+
+/* ---------------- there all card sm divice size ---------- */
+@media (min-width: 335px) and (max-width: 650px) {
   .sm-card-padding {
-    margin: 0 50px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px 0px !important;
+  }
+  .cart-image {
+    height: 200px !important;
+    overflow: hidden !important;
+  }
+  .image-clip-cutting {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 30px) 0,
+      100% 30px,
+      100% 100%,
+      0 100%
+    ) !important;
+  }
+  .image-clip-cutting::after {
+    width: 30px !important;
+    height: 30px !important;
+
+    clip-path: polygon(
+      0 0,
+      calc(100% - 30px) 0,
+      100% 30px,
+      100% 100%,
+      0 100%
+    ) !important;
   }
 }
 

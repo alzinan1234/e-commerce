@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41", Arial, sans-serif !important;
+}
+
 .maxWidth {
   max-width: 1450px !important;
 }
@@ -9,4 +13,11 @@
 .text-shadow {
   /*  larger font size, more shadow distance  */
   text-shadow: 0.1em 0.1em 0 hsl(200 50% 30%);
+}
+
+.BgDarkBlue {
+  background-color: #003366;
+}
+.textDarkBlue {
+  color: #003366;
 }
