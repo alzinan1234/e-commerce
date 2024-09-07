@@ -1,0 +1,15 @@
+/* Quick-zoom Container */
+.img-hover-zoom--quick-zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-hover-zoom--quick-zoom img {
+  transition: transform 0.25s ease, visibility 0.25s ease;
+  transform-origin: center; /* Default transform origin */
+}
+
+/* The Transformation on hover */
+.img-hover-zoom--quick-zoom:hover img {
+  transform: scale(2); /* Zoom in */
+}

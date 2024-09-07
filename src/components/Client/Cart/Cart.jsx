@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import "./Cart.css";
+import Link from "next/link";
 
 const Cart = ({ allItems }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -116,28 +117,34 @@ const Cart = ({ allItems }) => {
                     ></path>
                   </svg>
                 </button>
+
                 <button
                   className="action-btn p-1 text-sm lg:text-[17px] lg:px-4 py-[5px] w-full rounded
                duration-300  hover:bg-[#003366] hover:text-white hover:border-transparent bg-transparent text-black border-[1px] border-black"
                 >
-                  Buy Now{" "}
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="hidden @[150px]:inline-block"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <Link
+                    className="w-[100%] h-[100%] relative z-[1000] flex justify-center items-center"
+                    href={`/items/details/2`}
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
+                    Buy Now{" "}
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      className="hidden @[150px]:inline-block"
+                      height="20"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </Link>
                 </button>
               </div>
             </div>
