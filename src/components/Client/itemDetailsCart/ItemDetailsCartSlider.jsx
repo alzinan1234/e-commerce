@@ -9,6 +9,9 @@ import image5 from "@/assets/categorys/jacket.jpeg";
 import image6 from "@/assets/categorys/blazer.jpeg";
 import "./ItemDetails.css";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const ItemDetailsCartSlider = () => {
   const [displayImage, setDisplayImage] = useState(image6);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -115,10 +118,10 @@ const ItemDetailsCartSlider = () => {
   };
 
   return (
-    <div>
-      <div className="relative flex justify-center items-center  rounded-md ">
+    <div className="">
+      <div className="relative flex justify-center items-center md:border-l-2 md:border-r-2 border-[#003366]  rounded-md ">
         <Image
-          className="project-main-image border-4 rounded-md cursor-pointe "
+          className="project-main-image rounded-md cursor-pointer"
           src={displayImage}
           alt="Main display"
           width={700}
@@ -171,30 +174,51 @@ const ItemDetailsCartSlider = () => {
           </svg>
         </button>
       </div>
-      <div className="mt-3">
+      <div className="mt-3 hidden md:block">
         <Slider {...settings} ref={sliderRef}>
           {academicData.map((data, index) => (
             <div key={data.id}>
               <div
                 onClick={() => handleImageClick(data.image)}
-                className={`p-3  mx-1 cursor-pointer ${
+                className={`mx-1 cursor-pointer ${
                   activeSlide === index
                     ? "border-[#003366] border-t-2 border-l-2 border-b-2"
-                    : "border-[#003366]   border-r-2"
+                    : "border-[#003366] border-r-2"
                 }`}
               >
                 <Image
                   className="object-cover project-image"
                   src={data.image}
                   alt=""
-                  width={100}
-                  height={100}
                 />
               </div>
             </div>
           ))}
         </Slider>
       </div>
+      <div className="md:hidden mt-3 flex">
+        <div className="flex">
+          {academicData.map((data, index) => (
+            <div key={data.id}>
+              <div
+                onClick={() => handleImageClick(data.image)}
+                className={`mx-1 cursor-pointer ${
+                  activeSlide === index
+                    ? "border-[#003366] border-t-2 border-l-2 border-b-2 "
+                    : "border-[#003366] border-r-2"
+                }`}
+              >
+                <Image
+                  className="object-cover project-image"
+                  src={data.image}
+                  alt=""
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Modal */}
       {isModalOpen && (
         <div

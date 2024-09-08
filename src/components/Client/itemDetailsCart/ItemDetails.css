@@ -13,3 +13,8 @@
 .img-hover-zoom--quick-zoom:hover img {
   transform: scale(2); /* Zoom in */
 }
+
+.project-image {
+  width: 100px !important;
+  height: 100px !important;
+}

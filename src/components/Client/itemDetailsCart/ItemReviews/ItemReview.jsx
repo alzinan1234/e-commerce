@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ItemReview = () => {
@@ -33,9 +34,9 @@ const ItemReview = () => {
             class="p-8 border-[#003366] border-[1px]  my-3 bg-white  shadow-2xl aspect-auto rounded-3xl shadow-gray-600/10"
           >
             <div class="flex gap-4 items-start">
-              <img
+              <Image
                 class="w-12 h-12 rounded-full"
-                src="https://randomuser.me/api/portraits/women/14.jpg"
+                src=""
                 alt="user avatar"
                 width="200"
                 height="200"
@@ -63,7 +64,7 @@ const ItemReview = () => {
             </div>
             <p class="mt-8">
               I love the customizable designs! I was able to choose the perfect
-              color to match my car's interior. The material feels very durable.
+              color to match my car s interior. The material feels very durable.
             </p>
           </div>
         ))}
